@@ -1,0 +1,39 @@
+def play_game():
+    """This function contains the main story and game logic."""
+    print("Welcome to the Story Teller!")
+    print("You are standing in a spooky forest. You see a path to the left and a path to the right.")
+
+    while True:
+        choice = input("Do you go left or right? ")
+        choice = choice.lower()
+
+        if "left" in choice:
+            print("You walk down the left path and find a treasure chest!")
+            print("You open the chest and find a magic key.")
+            break
+        elif "right" in choice:
+            print("You walk down the right path. Suddenly, a ghost appears!")
+            print("The ghost says 'BOO!' and you run away. The game is over.")
+            break
+        else:
+            print("I don't understand that. Please choose left or right.")
+
+
+def main_loop():
+    """This function keeps the game running as long as the user wants to play."""
+    while True:
+        play_game()  # Start a new game
+
+        play_again = input("Do you want to play again? (yes/no) ")
+        if play_again.lower() != "yes":
+            break  # Exit the loop if the user doesn't say "yes"
+
+
+if __name__ == "__main__":
+    main_loop()
+    print("Thanks for playing! Goodbye!")
+  
+
+
+
+# saeerjansaeer@gmail.com
